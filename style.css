@@ -1,0 +1,36 @@
+hmtl,body   {background-color:#000;color:#fff;text-align:center;font-family:verdana;}
+body>div    {width:640px;height:480;position:relative;margin:auto;}
+div>div     {display:none;margin:0px;position:absolute;left:0;top:0;text-align:center;width:100%;margin-top:50px;height:430px;}
+div>div>span{font-size:60px}
+div>div>span>span{font-size:24px;}
+button      {display:block;margin:auto;font-size:17px;font-family:verdana;left:25%;width:50%;height:35px;margin-top:20px;border:none;background-color:transparent;color:#fff;}
+button:hover{background-color:rgba(45,45,45,0.7);}
+button.bottom{position:absolute;bottom:20px;}
+button.disabled{text-decoration:line-through;}
+canvas      {border:1px solid #fff;height:480px;width:640px;cursor:crosshair;}
+canvas span {color:#fff;position:absolute;top:10px;}
+#score      {left:10px;position:absolute;left:10px;top:10px;}
+#highscore  {right:10px;position:absolute;right:10px;top:10px;}
+
+.menu>.menu,
+.game>.game,
+.pause>.pause,
+.highscores>.highscores,
+.settings>.settings,
+.controls>.controls{display:block;}
+
+.game>.game	{cursor:crosshair;overflow:hidden;margin-top:0;height:480px;}
+.game>.game>div{display:none;background-color:#ccc;position:absolute;left:0;top:0;margin:0;}
+.game>.game>#vert{width:1px;height:100%;}
+.game>.game>#hori{width:100%;height:1px;}
+
+table,th,td	{width:50%;}
+tr:hover	{background:rgba(45,45,45,0.7);}
+th			{text-align:right;}
+td			{text-align:center;}
+table 		{margin:1em auto;}
+
+#debug		{margin-top:1em;display:none;}
+#debug>div	{display:block;position:static;height:auto;width:auto;margin-top:0;}
+.failed		{color:#f00;}
+.success	{color:#0f0;}

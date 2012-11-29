@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        "Geometry Wars: Retro Evolved" is Copyrighted by "Bizarre Creations".
+        All game materials and gameplay elements are based off of the "Geometry Wars: Retro Evolved" game.
+        
+        Canvas Wars was developed by Michael Hall as a project to test the limits of javascript and HTML5 in a human perceivable way.
+        Later optimized to use more efficient code, and also to expand on it as a game so that it could be reasonably used.
+    -->
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>Canvas Wars V2</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body onload="init();"><div class="menu" style='height:480;width:640;'>
+        <canvas height="480" width="640"></canvas><br>
+        
+        <span id='highscore'>0</span>
+        <span id='score'>0</span>
+        
+        <div class="game"></div>
+        <div class="pause">
+            <span>Canvas Wars<br><span>Paused</span></span>
+            <button onclick="GoTo('game');togglePause();">Resume</button>
+            <button onclick="GoTo('menu');endGame();">End Game</button>
+        </div>
+        <div class="highscores">
+            <span>Canvas Wars<br><span>High Scores</span></span>
+            <table>
+                <tr><th>Latest Score : </th><td id='the_score'>0</td></tr>
+                <tr><th>High Score : </th><td id='the_highscore'></td></tr>
+            </table>
+            <button onclick="setScore.reset();">Reset Scores</button>
+            <button onclick="GoTo('menu')" class='bottom'>Return</button>
+        </div>
+        <div class="settings">
+            <span>Canvas Wars<br><span>Settings</span></span>
+            <!--<button onclick='gameAudio.toggle("music");buttonToggle(this);'>Toggle Music</button>
+            <button onclick='gameAudio.toggle("effects");buttonToggle(this);'>Toggle Sound Effects</button>-->
+            <button onclick='fireworks = !fireworks;buttonToggle(this);'>Toggle Explosions</button>
+            <button onclick='crosshair = !crosshair;buttonToggle(this);' class='disabled'>Toggle Extended Crosshair</button>
+            <button onclick="GoTo('menu')" class='bottom'>Return</button>
+        </div>
+        <div class="controls">
+            <span>Canvas Wars<br><span>Controls</span></span>
+            <table>
+                <tr><th>Fire Primary : </th><td>Mouse Left</td></tr>
+                <tr><th>Fire Secondary : </th><td>Mouse Right</td></tr>
+                <tr><th>Move Forward : </th><td>W</td></tr>
+                <tr><th>Turn Left : </th><td>A</td></tr>
+                <tr><th>Turn Right : </th><td>D</td></tr>
+            </table>
+            <button onclick="GoTo('menu')" class='bottom'>Return</button>
+        </div>
+        <div class="menu">
+            <span>Canvas Wars<br><span>&nbsp;</span></span>
+            <button onclick="GoTo('game');startGame(1);">Play Game</button>
+            <button onclick="GoTo('highscores')">High Scores</button>
+            <button onclick="GoTo('settings')">Settings</button>
+            <button onclick="GoTo('controls')">Controls</button>
+        </div>
+    </div>
+    <br><br><i><b>Canvas Wars</b></i> was based completely off of <i><b>Geometry Wars:Retro Evolved</b></i>, a game by <b>Bizarre Creations</b>.
+    All credits to the concept and art should be attributed to <b>Bizarre Creations</b>.
+    Development of the <i><b>Canvas Wars</b></i> game is attributed solely to Michael Hall.
+	<div id='debug' style='display:none'>
+    <br>Keys pressed : <span id='keys'></span>
+    <br>Mouse data : <span id='mouse'></span>
+    <br>Difficulty Level : <span id='difficulty'></span>
+    <br>Total Sprites : <span id='sprites'></span>
+    <br>Total Players : <span id='players'></span>
+    <br>Total Player Shots : <span id='player_shots'></span>
+    <br>Total Enemies : <span id='enemies'></span>
+    <br>Total Enemy Shots : <span id='enemy_shots'></span>
+    <br>Total Effects : <span id='effects'></span>
+    <br>Audio Format : <span id='audioused'></span>
+    </div>
+    <script src="sprites.js" type="text/javascript"></script>
+    <script src="sequences.js" type="text/javascript"></script>
+    <script src="audio.js" type="text/javascript"></script>
+    <script src="game.js" type="text/javascript"></script>
+    </body>
+</html>
