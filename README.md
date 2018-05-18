@@ -3,7 +3,7 @@ Canvas Wars
 
 Canvas Wars is a simple space shooter game, based on Geometry Wars by Bizarre Creations.
 
-A Demo is available at [http://canvaswars.michaelhall.ca/].
+A Demo is available at [http://www.mhall.ca/projects/canvaswars/index.html].
 
 The project was originally created as an experiment to learn the HTML5 Canvas API.
 
